@@ -1,0 +1,95 @@
+Xft.dpi:                        96
+Xft.antialias:                  true
+Xft.hinting:                    true
+Xft.hintstyle:                  hintsfull
+Xft.rgba:                       rgb
+
+!Xcursor.theme:                  neutral
+!Xcursor.size: 10
+
+! {{{ URxvt
+URxvt.saveLines:                32767
+URxvt.scrollBar:                false
+URxvt.loginShell:               true
+
+URxvt.termName:                 rxvt-unicode
+URxvt.imLocale:                 ru_RU.utf8
+URxvt.cutchars:                 "()*,<>[]{}|'"
+URxvt.secondaryScroll:          true
+URxvt.transparent:		true
+URxvt.shading:			15
+URxvt.visualBell:               false
+URxvt.depth:                    24
+URxvt.scrollTtyOutput:          false
+URxvt.font:			            xft:Monospace:antialiasing=true:size=10
+
+URxvt.urlLauncher:              /usr/bin/google-chrome
+URxvt.matcher.button:           1
+URxvt.matcher.pattern.1:        \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+! }}}
+
+! ---| xpdf |--- {{{
+xpdf*enableFreetype: yes
+xpdf*antialias: yes
+xpdf*foreground: black
+xpdf*background: white
+xpdf*urlCommand: /usr/bin/opera %s
+xpdf*viKeys: on
+!}}}
+
+
+
+!------------------------yeah console
+!какой терминал юзаем, отсюда уже и спецыфичные для терминала вещи
+!по типу цвет фона, полосе прокрутки и прочее
+yeahconsole*term:urxvt
+!высота
+yeahconsole*consoleHeight:25
+!хоткей для вызова (вместо None можно указать и Menu Control и прочее)
+!т.е. здесь вызов консоли будет производиться по F1
+yeahconsole*toggleKey:None+F12
+!цвет фона
+!yeahconsole*background:#656060
+!цвет текста
+!yeahconsole*foreground:#E6E3E6
+!цвет курсора
+yeahconsole*cursorColor:#E6E3E6
+!автоматический перезапуск при выходе
+yeahconsole*restart:1
+!хоткей для разворачивания на весь экран
+yeahconsole*keyFull:None+F11
+!хоткеи дли изменения размера (минус и плюс на NumLock'е)
+yeahconsole*keySmaller:Control+KP_Subtract
+yeahconsole*keyBigger:Control+KP_Add
+! шрифты ("шрифты говно" © LOR)
+yeahconsole*faceName: xft:Monospace:antialiasing=true:size=10
+yeahconsole*boldFont: xft:Monospace:style=Bold:size=10  
+!обрабатываем Esc по человечески
+yeahconsole*metaSendsEscape: true
+yeahconsole*aniDelay: 10
+!--------------------------
+
+! {{{ Colors
+
+! tangoesque scheme
+*foreground:                    #b4b4b4
+*background:                    #1c1c1c
+*color0:                        #000000
+*color8:                        #555753
+*color1:                        #ff6565
+*color9:                        #ff8d8d
+*color2:                        #93d44f
+*color10:                       #c8e7a8
+*color3:                        #eab93d
+*color11:                       #ffc123
+*color4:                        #204a87
+*color12:                       #3465a4
+*color5:                        #ce5c00
+*color13:                       #f57900
+*color6:                        #89b6e2
+*color14:                       #46a4ff
+*color7:                        #cccccc
+*color15:                       #ffffff
+! }}} 
+
+

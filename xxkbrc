@@ -1,0 +1,24 @@
+XXkb.mainwindow.enable: yes
+XXkb.mainwindow.label.enable: yes
+XXkb.mainwindow.in_tray: witray
+XXkb.mainwindow.type: tray
+
+XXkb.mainwindow.geometry: 25x15+0-0
+XXkb.mainwindow.border.color: #CCCCCC
+XXkb.mainwindow.border.width: 0
+
+XXkb.mainwindow.label.text.1: EN
+XXkb.mainwindow.label.text.2: RU
+XXkb.mainwindow.label.background: #222222
+XXkb.mainwindow.label.foreground: #FFFFFF
+XXkb.mainwindow.label.font: $WMII_FONT
+
+XXkb.controls.add_when_start: no
+XXkb.controls.add_when_create: no
+XXkb.controls.add_when_change: yes
+XXkb.controls.focusout: yes
+XXkb.controls.two_state: no
+XXkb.button.enable: no
+
+XXkb.group.base: 1
+XXkb.group.alt: 2
