@@ -14,14 +14,16 @@ apply_file() {
     FILE=~/.${1%%/}
     DOTFILE=~/dotfiles/.${1%%/}
     echo "Processing:   " $FILE
-    # Backup
+    if [[ -L "$FILE" ]]; then
+        unlink $FILE
+    fi
+    # if there were a config file, not a link
+    # backup it and remove the original
     if [[ -f "$FILE" ]]; then
         cp $FILE $FILE.old
         rm $FILE
     fi
-    if [[ -L "$FILE" ]]; then
-        unlink $FILE
-    fi
+
 
     ln -s $DOTFILE $FILE
 }
