@@ -30,7 +30,8 @@ apply_file() {
 
 apply_many() {
     for i in $1; do
-        if [[ ! -x "$i" ]]; then
+        # Obviously we don't need a README.org in a homedir
+        if [[ ! -x "$i" && ! "$i" == "README.org" ]]; then
             apply_file $i
         fi
     done;
