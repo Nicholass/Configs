@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+
 ##
 ## 1. File applyer
 ## .. 1. Check if exists in ~/
