@@ -12,7 +12,7 @@
 ##
 apply_file() {
     FILE=~/.${1%%/}
-    DOTFILE=~/dotfiles/.${1%%/}
+    DOTFILE=~/dotfiles/${1%%/}
     echo "Processing:   " $FILE
     if [[ -L "$FILE" ]]; then
         unlink $FILE
