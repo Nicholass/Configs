@@ -11,7 +11,12 @@
 ## .. 2. if arguments - apply matching
 ##
 apply_file() {
+    # assuming the argument i "Xresources"
+    # the homedir config would be:
+    # ~/.Xresources
     FILE=~/.${1%%/}
+    # and the corresponding dotifle:
+    # ~/dotfiles/Xresources
     DOTFILE=~/dotfiles/${1%%/}
     echo "Processing:   " $FILE
     if [[ -L "$FILE" ]]; then

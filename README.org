@@ -1,2 +1,3 @@
 * Usage
 =apply.sh= will backup all previous config files from the list and substitute them with the symlinks on configs from ~dotfiles~
+* TODO add auto-listing in here and tangle script from here

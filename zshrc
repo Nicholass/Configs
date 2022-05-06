@@ -53,6 +53,8 @@ alias -g T='| tail -n1'
 
 alias ec='emacsclient -t'
 alias refresh='source ~/.zshrc'
+alias loadenv='source ~/.env'
+alias nscripts='cat package.json| jq .scripts'
 #alias zeronet="/home/murzikv/opt/ZeroNet-linux-dist-linux64/ZeroNet.sh >> /dev/null"
 # alias emacsc="emacsclient -t"                      # used to be "emacs -nw"
 # alias emacsx="emacsclient -a -n"                # used to be "sudo emacs -nw"
@@ -113,3 +115,4 @@ esac
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.local/bin/"
+eval "$(rbenv init -)"
