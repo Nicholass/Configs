@@ -55,6 +55,7 @@ alias ec='emacsclient -t'
 alias refresh='source ~/.zshrc'
 alias loadenv='source ~/.env'
 alias nscripts='cat package.json| jq .scripts'
+alias winesteam='primusrun wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/steam.exe'
 #alias zeronet="/home/murzikv/opt/ZeroNet-linux-dist-linux64/ZeroNet.sh >> /dev/null"
 # alias emacsc="emacsclient -t"                      # used to be "emacs -nw"
 # alias emacsx="emacsclient -a -n"                # used to be "sudo emacs -nw"
@@ -116,3 +117,6 @@ esac
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.local/bin/"
 eval "$(rbenv init -)"
+eval "$(luarocks path)"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
