@@ -51,6 +51,7 @@ alias -g GI='|grep -i --color'
 alias -g H='| head -n1'
 alias -g T='| tail -n1'
 
+alias d-c='docker-compose'
 alias ec='emacsclient -t'
 alias refresh='source ~/.zshrc'
 alias loadenv='source ~/.env'
@@ -73,7 +74,7 @@ alias -s {dpf,djvu,ps2}=evince
 
 # Autocorrect comands
 setopt CORRECT_ALL
-SPROMPT="Good sir, %r вместо %R? ([Y]es/[N]o/[E]dit/[A]bort) "
+SPROMPT="you mean, %r, not %R? ([Y]es/[N]o/[E]dit/[A]bort) "
 
 # Binding Ctrl+arrows
 bindkey ';5D' backward-word
@@ -120,3 +121,6 @@ eval "$(rbenv init -)"
 eval "$(luarocks path)"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export PYTHONPATH=/usr/lib/python3/dist-packages:/usr/lib/python3/site-packages:$PYTHONPATH
+#export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
