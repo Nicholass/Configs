@@ -41,6 +41,10 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+autoload -U bashcompinit
+bashcompinit
+eval "$(register-python-argcomplete pipx)"
+
 # Prompt format bash style
 PROMPT="%m %~ %(!.#.$) "
 
@@ -57,6 +61,8 @@ alias refresh='source ~/.zshrc'
 alias loadenv='source ~/.env'
 alias nscripts='cat package.json| jq .scripts'
 alias winesteam='primusrun wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/steam.exe'
+alias venv_init='python3 -m venv .pyenv'
+
 #alias zeronet="/home/murzikv/opt/ZeroNet-linux-dist-linux64/ZeroNet.sh >> /dev/null"
 # alias emacsc="emacsclient -t"                      # used to be "emacs -nw"
 # alias emacsx="emacsclient -a -n"                # used to be "sudo emacs -nw"
@@ -67,8 +73,8 @@ export EDITOR="/usr/bin/emacsclient -t"                  # $EDITOR opens in term
 export VISUAL="/usr/bin/emacsclient"         # $VISUAL opens in GUI mode
 
 # Extension aliases
-alias -s {avi,mpeg,mpg,mov,m2v,AVI}=mplayer
-alias -s {ogg,mp3,wav,wma}=mplayer
+alias -s {avi,mpeg,mpg,mov,m2v,AVI}=vlc
+alias -s {ogg,mp3,wav,wma}=vlc
 #alias -s {txt,conf)=nano
 alias -s {dpf,djvu,ps2}=evince
 
@@ -124,3 +130,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export PYTHONPATH=/usr/lib/python3/dist-packages:/usr/lib/python3/site-packages:$PYTHONPATH
 #export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
+
+# CloudSDK segfaults without a trace
+export CLOUDSDK_PYTHON=python3.11
