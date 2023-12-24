@@ -1,22 +1,33 @@
-! Base16 Gruvbox dark, medium
-! Scheme: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+! Scheme: https://gist.github.com/yuriihabrusiev/6131324
+#define G_dark0         #282828
+#define G_dark1         #3c3836
+#define G_dark2         #504945
+#define G_dark3         #665c54
+#define G_dark4         #7c6f64
 
-#define base00 #262626
-#define base01 #3a3a3a
-#define base02 #4e4e4e
-#define base03 #8a8a8a
-#define base04 #949494
-#define base05 #f8f2ec
-#define base06 #d5c4a1
-#define base07 #ebdbb2
-#define base08 #d75f5f
-#define base09 #ff8700
-#define base0A #ffaf00
-#define base0B #afaf00
-#define base0C #85ad85
-#define base0D #3e7793
-#define base0E #d485ad
-#define base0F #d65d0e
+#define G_medium        #928374
+
+#define G_light0        #fdf4c1
+#define G_light1        #ebdbb2
+#define G_light2        #d5c4a1
+#define G_light3        #bdae93
+#define G_light4        #a89984
+
+#define G_red0          #fb4934
+#define G_green0        #b8bb26
+#define G_yellow0       #fabd2f
+#define G_blue0         #83a598
+#define G_purple0       #d3869b
+#define G_aqua0         #8ec07c
+#define G_orange0       #fe8019
+
+#define G_red1          #9d0006
+#define G_green1        #79740e
+#define G_yellow1       #b57614
+#define G_blue1         #076678
+#define G_purple1       #8f3f71
+#define G_aqua1         #427b58
+#define G_orange1       #af3a03
 
 Xft.dpi:                        96
 Xft.antialias:                  true
@@ -56,7 +67,7 @@ yeahconsole*term:		urxvt
 yeahconsole*transparent:	true
 yeahconsole*consoleHeight:	40
 yeahconsole*toggleKey:		None+F2
-yeahconsole*cursorColor:	base05
+yeahconsole*cursorColor:	G_medium
 yeahconsole*restart:		1
 ! Fullscreen
 yeahconsole*keyFull:	      	Control+XF86Launch1
@@ -73,28 +84,40 @@ yeahconsole*aniDelay: 		10
 !--------------------------
 
 
-*.foreground:   base05
-#ifdef background_opacity
-*.background:   [background_opacity]base00
-#else
-*.background:   base00
-#endif
-*.cursorColor:  base05
+*background:              G_dark0
+*foreground:              G_light1
+*cursorColor:             G_light1
+*fading:                  40
+*fadeColor:               G_dark0
 
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
+! Black
+*color0:                  G_dark0
+*color8:                  G_dark1
 
-*.color8:       base03
-*.color9:       base09
-*.color10:      base01
-*.color11:      base02
-*.color12:      base04
-*.color13:      base06
-*.color14:      base0F
-*.color15:      base07
+! Red
+*color1:                  G_red0
+*color9:                  G_red1
+
+! Green
+*color2:                  G_green0
+*color10:                 G_green1
+
+! Yellow
+*color3:                  G_yellow0
+*color11:                 G_yellow1
+
+! Blue
+*color4:                  G_blue0
+*color12:                 G_blue1
+
+! Magenta
+*color5:                  G_purple0
+*color13:                 G_purple1
+
+! Cyan
+*color6:                  G_aqua0
+*color14:                 G_aqua1
+
+! White
+*color7:                  G_light0
+*color15:                 G_light1
