@@ -36,13 +36,15 @@ URxvt.termName:                 rxvt-unicode
 URxvt.locale:                   UTF8
 URxvt.cutchars:                 "()*,<>[]{}|'"
 URxvt.secondaryScroll:          true
-URxvt.transparent:		true
-URxvt.shading:			15
+urxvt.depth: 			32
+URxvt.background: 		rgba:3f00/3f00/3f00/dddd
 URxvt.visualBell:               false
-URxvt.depth:                    24
 URxvt.scrollTtyOutput:          false
-URxvt.font:			xft:Monospace:antialiasing=true:size=10
-URxvt.letterSpace: 		-1
+URxvt.font:			xft:0xProto Nerd Font:pixelsize=16,xft:Noto Color Emoji
+URxvt.boldFont:			xft:0xProto Nerd Font:bold:pixelsize=17,xft:Noto Color Emoji
+Urxvt.italicFont:		xft:0xProto Nerd Font:italic:pixelsize=16,xft:Noto Color Emoji
+Urxvt.boldItalicFont:		xft:0xProto Nerd Font:bold:italic:pixelsize=16,xft:Noto Color Emoji
+!URxvt.letterSpace: 		-1
 !URxvt.urlLauncher:              /usr/bin/google-chrome
 URxvt.matcher.button:           1
 URxvt.matcher.pattern.1:        \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
@@ -51,6 +53,7 @@ URxvt.matcher.pattern.1:        \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 
 !------------------------yeah console
 yeahconsole*term:		urxvt
+yeahconsole*transparent:	true
 yeahconsole*consoleHeight:	40
 yeahconsole*toggleKey:		None+F2
 yeahconsole*cursorColor:	base05
@@ -62,8 +65,8 @@ yeahconsole*inheritPixmap:	true
 yeahconsole*keySmaller:		Control+KP_Subtract
 yeahconsole*keyBigger:		Control+KP_Add
 ! Fonts
-yeahconsole*faceName:		xft:Monospace:antialiasing=true:size=10
-yeahconsole*boldFont: 		xft:Monospace:style=Bold:size=10
+yeahconsole*faceName:		xft:0xProto Nerd Font:pixelsize=16,xft:Noto Color Emoji
+yeahconsole*boldFont: 		xft:0xProto Nerd Font:bold:pixelsize=16,xft:Noto Color Emoji
 ! Meta-Esc
 yeahconsole*metaSendsEscape:	true
 yeahconsole*aniDelay: 		10
