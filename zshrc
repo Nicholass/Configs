@@ -1,13 +1,17 @@
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 
 #export PATH=/opt/adt-bundle-linux-x86_64-20140702/eclipse:$PATH
 export PATH=~/.npm-global/bin:$PATH
 # Set up the prompt
-export VIRTUAL_ENV_DISABLE_PROMPT=true
-autoload -Uz promptinit
-promptinit
-prompt adam1
+# export VIRTUAL_ENV_DISABLE_PROMPT=true
+# autoload -Uz promptinit
+# promptinit
+# prompt adam1
 
 setopt histignorealldups sharehistory
 
@@ -133,3 +137,4 @@ export PYTHONPATH=/usr/lib/python3/dist-packages:/usr/lib/python3/site-packages:
 
 # CloudSDK segfaults without a trace
 export CLOUDSDK_PYTHON=python3.11
+source $ZSH/oh-my-zsh.sh

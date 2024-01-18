@@ -51,16 +51,24 @@ urxvt.depth: 			32
 URxvt.background: 		rgba:3f00/3f00/3f00/dddd
 URxvt.visualBell:               false
 URxvt.scrollTtyOutput:          false
-URxvt.font:			xft:0xProto Nerd Font:pixelsize=16,xft:Noto Color Emoji
-URxvt.boldFont:			xft:0xProto Nerd Font:bold:pixelsize=17,xft:Noto Color Emoji
-Urxvt.italicFont:		xft:0xProto Nerd Font:italic:pixelsize=16,xft:Noto Color Emoji
-Urxvt.boldItalicFont:		xft:0xProto Nerd Font:bold:italic:pixelsize=16,xft:Noto Color Emoji
+URxvt.font:			xft:0xProto\ Nerd\ Font\ Mono:pixelsize=16,xft:Noto\ Color\ Emoji
+URxvt.boldFont:			xft:0xProto\ Nerd\ Font\ Mono:bold:pixelsize=16,xft:Noto\ Color\ Emoji
+Urxvt.italicFont:		xft:0xProto\ Nerd\ Font\ Mono:italic:pixelsize=16,xft:Noto\ Color\ Emoji
+Urxvt.boldItalicFont:		xft:0xProto\ Nerd\ Font\ Mono:bold:italic:pixelsize=16,xft:Noto\ Color\ Emoji
 !URxvt.letterSpace: 		-1
 !URxvt.urlLauncher:              /usr/bin/google-chrome
 URxvt.matcher.button:           1
 URxvt.matcher.pattern.1:        \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 ! }}}
 
+! {{{xterm
+xterm*saveLines: 10000
+xterm*scrollBar: false
+xterm*scrollLines: 1
+XTerm.vt100.selectToClipboard: true
+xterm*faceName: 0xProto\ Nerd\ Font\ Mono
+xterm*faceSize: 16
+! }}}
 
 !------------------------yeah console
 yeahconsole*term:		urxvt
@@ -76,8 +84,8 @@ yeahconsole*inheritPixmap:	true
 yeahconsole*keySmaller:		Control+KP_Subtract
 yeahconsole*keyBigger:		Control+KP_Add
 ! Fonts
-yeahconsole*faceName:		xft:0xProto Nerd Font:pixelsize=16,xft:Noto Color Emoji
-yeahconsole*boldFont: 		xft:0xProto Nerd Font:bold:pixelsize=16,xft:Noto Color Emoji
+yeahconsole*faceName:		xft:0xProto\ Nerd\ Font\ Mono:pixelsize=16,xft:Noto\ Color\ Emoji
+yeahconsole*boldFont: 		xft:0xProto\ Nerd\ Font\ Mono:bold:pixelsize=16,xft:Noto\ Color\ Emoji
 ! Meta-Esc
 yeahconsole*metaSendsEscape:	true
 yeahconsole*aniDelay: 		10
