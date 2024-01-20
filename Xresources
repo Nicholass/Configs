@@ -56,9 +56,22 @@ URxvt.boldFont:			xft:0xProto\ Nerd\ Font\ Mono:bold:pixelsize=16,xft:Noto\ Colo
 Urxvt.italicFont:		xft:0xProto\ Nerd\ Font\ Mono:italic:pixelsize=16,xft:Noto\ Color\ Emoji
 Urxvt.boldItalicFont:		xft:0xProto\ Nerd\ Font\ Mono:bold:italic:pixelsize=16,xft:Noto\ Color\ Emoji
 !URxvt.letterSpace: 		-1
-!URxvt.urlLauncher:              /usr/bin/google-chrome
+URxvt.urlLauncher:              /usr/bin/firefox
 URxvt.matcher.button:           1
 URxvt.matcher.pattern.1:        \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+
+URxvt.letterSpace: 		0
+URxvt.lineSpace: 		0
+URxvt.geometry: 		92x24
+URxvt.internalBorder: 		24
+URxvt.cursorBlink: 		true
+URxvt.cursorUnderline: 		false
+Rxvt.saveline: 		2048
+URxvt.scrollBar: 		false
+URxvt.scrollBar_right: 		false
+URxvt.urgentOnBell: 		true
+URxvt.depth: 			24
+URxvt.iso14755: 		false
 ! }}}
 
 ! {{{xterm
@@ -90,7 +103,6 @@ yeahconsole*boldFont: 		xft:0xProto\ Nerd\ Font\ Mono:bold:pixelsize=16,xft:Noto
 yeahconsole*metaSendsEscape:	true
 yeahconsole*aniDelay: 		10
 !--------------------------
-
 
 *background:              G_dark0
 *foreground:              G_light1

@@ -1,17 +1,17 @@
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="jnrowe"
 plugins=(git)
 
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 
+autoload -U colors && colors
+export CLICOLOR=1
+export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 #export PATH=/opt/adt-bundle-linux-x86_64-20140702/eclipse:$PATH
-export PATH=~/.npm-global/bin:$PATH
+#export PATH=~/.npm-global/bin:$PATH
 # Set up the prompt
-# export VIRTUAL_ENV_DISABLE_PROMPT=true
-# autoload -Uz promptinit
-# promptinit
-# prompt adam1
+#export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 setopt histignorealldups sharehistory
 
@@ -59,6 +59,8 @@ alias -g GI='|grep -i --color'
 alias -g H='| head -n1'
 alias -g T='| tail -n1'
 
+alias ls='ls --color=tty'
+alias ll="ls -alG"
 alias d-c='docker-compose'
 alias ec='emacsclient -t'
 alias refresh='source ~/.zshrc'
@@ -118,7 +120,7 @@ case "$TERM" in
         export PS1="> "
         ;;
     xterm*|*rxvt*|eterm*|screen*)
-        tty -s && export PS1="%n@%m:%~ %%"
+        tty -s && export PS1="<>"
         ;;
 esac
 
@@ -127,14 +129,35 @@ esac
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.local/bin/"
-eval "$(rbenv init -)"
-eval "$(luarocks path)"
+# eval "$(rbenv init -)"
+# eval "$(luarocks path)"
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# Autoload zsh add-zsh-hook and vcs_info functions (-U autoload w/o substition, -z use zsh style)
+autoload -Uz add-zsh-hook vcs_info
+# Enable substitution in the prompt.
+setopt prompt_subst
+# Run vcs_info just before a prompt is displayed (precmd)
+add-zsh-hook precmd vcs_info
+# add ${vcs_info_msg_0} to the prompt
+# e.g. here we add the Git information in red
+#PROMPT='%1~ %F{red}${vcs_info_msg_0_}%f %# '
+PROMPT='%{%F{blue}%}${ret_status}%{%F{green}%}${PROMPT_HOST}%{%F{yellow}%} %2~ %{%F{magenta}%}${vcs_info_msg_0_}%{%F{red}%}${dir_status}%{%f%} '
+
+# Enable checking for (un)staged changes, enabling use of %u and %c
+zstyle ':vcs_info:*' check-for-changes true
+# Set custom strings for an unstaged vcs repo changes (*) and staged changes (+)
+zstyle ':vcs_info:*' unstagedstr ' *'
+zstyle ':vcs_info:*' stagedstr ' +'
+# Set the format of the Git information for vcs_info
+zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
+zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
+
+export PATH="$HOME/.npm-global/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export PYTHONPATH=/usr/lib/python3/dist-packages:/usr/lib/python3/site-packages:$PYTHONPATH
 #export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
 
 # CloudSDK segfaults without a trace
 export CLOUDSDK_PYTHON=python3.11
-source $ZSH/oh-my-zsh.sh
+# Not using it yet
+# source $ZSH/oh-my-zsh.sh
