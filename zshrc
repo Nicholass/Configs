@@ -60,14 +60,22 @@ alias -g H='| head -n1'
 alias -g T='| tail -n1'
 
 alias ls='ls --color=tty'
-alias ll="ls -alG"
+alias ll="ls -alhG"
 alias d-c='docker-compose'
 alias ec='emacsclient -t'
 alias refresh='source ~/.zshrc'
 alias loadenv='source ~/.env'
-alias nscripts='cat package.json| jq .scripts'
+alias nscripts='cat package.json | jq .scripts'
 alias winesteam='primusrun wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/steam.exe'
 alias venv_init='python3 -m venv .pyenv'
+
+# Function to get npm run script names
+_get_npm_scripts() {
+    nscripts | jq -r 'keys_unsorted[]'
+}
+
+# Zsh completion for npm run
+compdef '_values -s , -w "$(_get_npm_scripts)"' npm run
 
 #alias zeronet="/home/murzikv/opt/ZeroNet-linux-dist-linux64/ZeroNet.sh >> /dev/null"
 # alias emacsc="emacsclient -t"                      # used to be "emacs -nw"
