@@ -29,13 +29,13 @@
 #define G_aqua1         #427b58
 #define G_orange1       #af3a03
 
-Xft.dpi:                        96
-Xft.antialias:                  true
-Xft.hinting:                    true
-Xft.hintstyle:                  hintsfull
-Xft.rgba:                       rgb
-Xft.autohint:                   true
-Xft.lcdfilter:                  lcddefault
+! Xft.dpi:                        96
+! Xft.antialias:                  true
+! Xft.hinting:                    true
+! Xft.hintstyle:                  hintsfull
+! Xft.rgba:                       rgb
+! Xft.autohint:                   true
+! Xft.lcdfilter:                  lcddefault
 !Xcursor.theme:                 neutral
 !Xcursor.size: 10
 
@@ -47,14 +47,14 @@ URxvt.termName:                 rxvt-unicode
 URxvt.locale:                   UTF8
 URxvt.cutchars:                 "()*,<>[]{}|'"
 URxvt.secondaryScroll:          true
-urxvt.depth: 			32
-URxvt.background: 		rgba:3f00/3f00/3f00/dddd
+urxvt.depth: 			256
+URxvt.background: 		rgba:3f00/3f00/3f00/aaaa
 URxvt.visualBell:               false
 URxvt.scrollTtyOutput:          false
-URxvt.font:			xft:0xProto\ Nerd\ Font\ Mono:pixelsize=16,xft:Noto\ Color\ Emoji
-URxvt.boldFont:			xft:0xProto\ Nerd\ Font\ Mono:bold:pixelsize=16,xft:Noto\ Color\ Emoji
-Urxvt.italicFont:		xft:0xProto\ Nerd\ Font\ Mono:italic:pixelsize=16,xft:Noto\ Color\ Emoji
-Urxvt.boldItalicFont:		xft:0xProto\ Nerd\ Font\ Mono:bold:italic:pixelsize=16,xft:Noto\ Color\ Emoji
+URxvt.font:			xft:0xProto\ Nerd\ Font\ Mono:pixelsize=22,xft:Noto\ Color\ Emoji
+URxvt.boldFont:			xft:0xProto\ Nerd\ Font\ Mono:bold:pixelsize=22,xft:Noto\ Color\ Emoji
+Urxvt.italicFont:		xft:0xProto\ Nerd\ Font\ Mono:italic:pixelsize=22,xft:Noto\ Color\ Emoji
+Urxvt.boldItalicFont:		xft:0xProto\ Nerd\ Font\ Mono:bold:italic:pixelsize=22,xft:Noto\ Color\ Emoji
 !URxvt.letterSpace: 		-1
 URxvt.urlLauncher:              /usr/bin/firefox
 URxvt.matcher.button:           1
@@ -97,8 +97,8 @@ yeahconsole*inheritPixmap:	true
 yeahconsole*keySmaller:		Control+KP_Subtract
 yeahconsole*keyBigger:		Control+KP_Add
 ! Fonts
-yeahconsole*faceName:		xft:0xProto\ Nerd\ Font\ Mono:pixelsize=16,xft:Noto\ Color\ Emoji
-yeahconsole*boldFont: 		xft:0xProto\ Nerd\ Font\ Mono:bold:pixelsize=16,xft:Noto\ Color\ Emoji
+yeahconsole*faceName:		xft:0xProto\ Nerd\ Font\ Mono:pixelsize=22,xft:Noto\ Color\ Emoji
+yeahconsole*boldFont: 		xft:0xProto\ Nerd\ Font\ Mono:bold:pixelsize=22xft:Noto\ Color\ Emoji
 ! Meta-Esc
 yeahconsole*metaSendsEscape:	true
 yeahconsole*aniDelay: 		10
