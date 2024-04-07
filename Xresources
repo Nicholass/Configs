@@ -51,10 +51,10 @@ urxvt.depth: 			256
 URxvt.background: 		rgba:3f00/3f00/3f00/aaaa
 URxvt.visualBell:               false
 URxvt.scrollTtyOutput:          false
-URxvt.font:			xft:0xProto\ Nerd\ Font\ Mono:pixelsize=22,xft:Noto\ Color\ Emoji
-URxvt.boldFont:			xft:0xProto\ Nerd\ Font\ Mono:bold:pixelsize=22,xft:Noto\ Color\ Emoji
-Urxvt.italicFont:		xft:0xProto\ Nerd\ Font\ Mono:italic:pixelsize=22,xft:Noto\ Color\ Emoji
-Urxvt.boldItalicFont:		xft:0xProto\ Nerd\ Font\ Mono:bold:italic:pixelsize=22,xft:Noto\ Color\ Emoji
+URxvt.font:			xft:0xProto\ Nerd\ Font\ Mono:pixelsize=24,xft:Noto\ Color\ Emoji
+URxvt.boldFont:			xft:0xProto\ Nerd\ Font\ Mono:bold:pixelsize=24,xft:Noto\ Color\ Emoji
+Urxvt.italicFont:		xft:0xProto\ Nerd\ Font\ Mono:italic:pixelsize=24,xft:Noto\ Color\ Emoji
+Urxvt.boldItalicFont:		xft:0xProto\ Nerd\ Font\ Mono:bold:italic:pixelsize=24,xft:Noto\ Color\ Emoji
 !URxvt.letterSpace: 		-1
 URxvt.urlLauncher:              /usr/bin/firefox
 URxvt.matcher.button:           1
@@ -63,7 +63,7 @@ URxvt.matcher.pattern.1:        \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 URxvt.letterSpace: 		0
 URxvt.lineSpace: 		0
 URxvt.geometry: 		92x24
-URxvt.internalBorder: 		24
+URxvt.internalBorder: 		25
 URxvt.cursorBlink: 		true
 URxvt.cursorUnderline: 		false
 Rxvt.saveline: 		2048
@@ -97,11 +97,12 @@ yeahconsole*inheritPixmap:	true
 yeahconsole*keySmaller:		Control+KP_Subtract
 yeahconsole*keyBigger:		Control+KP_Add
 ! Fonts
-yeahconsole*faceName:		xft:0xProto\ Nerd\ Font\ Mono:pixelsize=22,xft:Noto\ Color\ Emoji
-yeahconsole*boldFont: 		xft:0xProto\ Nerd\ Font\ Mono:bold:pixelsize=22xft:Noto\ Color\ Emoji
+yeahconsole*faceName:		xft:0xProto\ Nerd\ Font\ Mono:pixelsize=24,xft:Noto\ Color\ Emoji
+yeahconsole*boldFont: 		xft:0xProto\ Nerd\ Font\ Mono:bold:pixelsize=24xft:Noto\ Color\ Emoji
 ! Meta-Esc
 yeahconsole*metaSendsEscape:	true
 yeahconsole*aniDelay: 		10
+yeahconsole*xOffset: 		0
 !--------------------------
 
 *background:              G_dark0
