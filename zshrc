@@ -149,7 +149,37 @@ add-zsh-hook precmd vcs_info
 # add ${vcs_info_msg_0} to the prompt
 # e.g. here we add the Git information in red
 #PROMPT='%1~ %F{red}${vcs_info_msg_0_}%f %# '
-PROMPT='%{%F{blue}%}${ret_status}%{%F{green}%}${PROMPT_HOST}%{%F{yellow}%} %2~ %{%F{magenta}%}${vcs_info_msg_0_}%{%F{red}%}${dir_status}%{%f%} '
+#!/bin/zsh
+
+# Define an array of foreground colors
+foreground_colors=('black' 'red' 'green' 'yellow' 'blue' 'magenta' 'cyan' 'white')
+
+# Define an array of background colors
+background_colors=('black' 'red' 'green' 'yellow' 'blue' 'magenta' 'cyan' 'white')
+
+# Get the current hostname
+hostname=$(hostname)
+
+# Seed the random number generator with the hostname
+seed=$(echo $hostname | cksum | awk '{print $1}')
+RANDOM=$seed
+
+# Choose a random background color
+background_index=$(( $RANDOM % ${#background_colors[@]} + 1 ))
+background=${background_colors[$background_index]}
+
+# Remove the selected background color from the array
+unset 'background_colors[$background_index]'
+
+# Choose a random foreground color from the remaining colors
+foreground=${foreground_colors[$RANDOM % ${#foreground_colors[@]} + 1]}
+
+# Set the Zsh prompt with the random colors
+PROMPT='%{%F{$foreground}%}%m%{%F{$background}%}'
+
+# Additional Zsh prompt configuration
+PROMPT+=' %{%F{yellow}%}%2~ %{%F{magenta}%}${vcs_info_msg_0_}%{%F{red}%}${dir_status}%{%f%} '
+
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
