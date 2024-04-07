@@ -61,7 +61,7 @@ alias -g T='| tail -n1'
 
 alias ls='ls --color=tty'
 alias ll="ls -alhG"
-alias d-c='docker-compose'
+alias d-c='docker compose'
 alias ec='emacsclient -t'
 alias refresh='source ~/.zshrc'
 alias loadenv='source ~/.env'
