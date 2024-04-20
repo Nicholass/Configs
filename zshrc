@@ -58,7 +58,7 @@ alias -g G='| grep'
 alias -g GI='|grep -i --color'
 alias -g H='| head -n1'
 alias -g T='| tail -n1'
-
+alias -g GM="| grep -Ev '^(#|//|;;|$)'" # non empty and non comment lines
 alias ls='ls --color=tty'
 alias ll="ls -alhG"
 alias d-c='docker compose'
