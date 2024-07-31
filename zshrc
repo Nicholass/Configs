@@ -58,7 +58,7 @@ alias -g G='| grep'
 alias -g GI='|grep -i --color'
 alias -g H='| head -n1'
 alias -g T='| tail -n1'
-alias -g GM="| grep -Ev '^(#|//|;;|$)'" # non empty and non comment lines
+alias -g GE="| grep -Ev '^\s*(#|//|;;|$)'" # non empty and non comment lines
 alias ls='ls --color=tty'
 alias ll="ls -alhG"
 alias d-c='docker compose'
@@ -68,6 +68,8 @@ alias loadenv='source ~/.env'
 alias nscripts='cat package.json | jq .scripts'
 alias winesteam='primusrun wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/steam.exe'
 alias venv_init='python3 -m venv .pyenv'
+alias passgen='openssl rand -base64 32 | tr -dc 'a-zA-Z0-9' | head -c'
+alias get_idf='. $HOME/opt/esp-idf/export.sh'
 
 # Function to get npm run script names
 _get_npm_scripts() {
