@@ -201,3 +201,39 @@ export PYTHONPATH=/usr/lib/python3/dist-packages:/usr/lib/python3/site-packages:
 export CLOUDSDK_PYTHON=python3.11
 # Not using it yet
 # source $ZSH/oh-my-zsh.sh
+
+# Store the time of the last command
+precmd() {
+    # If we have the duration, show it on the first line of the prompt, right-aligned
+    if [[ -n "$last_command_time" ]]; then
+        wording="Complete in:"
+        LEFT='%{%F{$foreground}%}$wording%{%f%}'
+        RIGHT='%{%F{$foreground}%}$last_command_time%{%f%}'
+        RIGHTWIDTH=$(($COLUMNS - ${#wording} + ${#LEFT} - 3))  # Right-aligned width calculation
+        print -P $LEFT${(l:$RIGHTWIDTH::.:)RIGHT}
+    fi
+}
+
+
+# Track the time of the last command and store it in a variable
+preexec() {
+  # Capture the start time of the command
+  export start_time=$(date +%s%3N)
+}
+
+# After the command runs, compute the duration and store it
+zshaddhistory() {
+  local end_time=$(date +%s%3N)
+  local duration=$((end_time - start_time))
+  last_command_time="Duration: $((duration / 1000))s"
+  #local duration=""
+  unset start_time
+  unset end_time
+}
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Load keys and local stuff
+loadenv
